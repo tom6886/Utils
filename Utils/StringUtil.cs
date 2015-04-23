@@ -34,5 +34,28 @@ namespace Utils
 
             return str.Substring(0, str.Length - 1);
         }
+
+        /// <summary>
+        /// 汤波
+        /// 2015-4-23 20:20:35
+        /// 拼接URL字符串
+        /// </summary>
+        /// <param name="url1">输入的URL</param>
+        /// <param name="urls">输入的URL</param>
+        /// <returns></returns>
+        public static string CombinUrl(string url1, params string[] urls)
+        {
+            StringBuilder strB = new StringBuilder();
+
+            strB.Append(url1);
+
+            foreach (string item in urls)
+            {
+                strB.Append("/");
+                strB.Append(item);
+            }
+
+            return strB.ToString();
+        }
     }
 }
