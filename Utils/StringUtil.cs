@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Data;
 using System.Text;
 
@@ -56,6 +57,16 @@ namespace Utils
             }
 
             return strB.ToString();
+        }
+
+        /// <summary>
+        /// 2015年11月8日14:37:37
+        /// 生成字符串类型唯一标识
+        /// </summary>
+        /// <returns></returns>
+        public static string UniqueID()
+        {
+            return Guid.NewGuid().ToString("N");
         }
     }
 }
