@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Data;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace Utils
@@ -67,6 +68,19 @@ namespace Utils
         public static string UniqueID()
         {
             return Guid.NewGuid().ToString("N");
+        }
+
+        /// <summary>
+        ///  2016年8月30日10:29:11
+        ///  MD5 加密
+        /// </summary>
+        /// <param name="str">输入字符串</param>
+        /// <returns></returns>
+        public static string Md5Encrypt(string str)
+        {
+            byte[] bytes = Encoding.Default.GetBytes(str.Trim());
+            MD5 md = new MD5CryptoServiceProvider();
+            return BitConverter.ToString(md.ComputeHash(bytes)).Replace("-", "");
         }
     }
 }
