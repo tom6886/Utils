@@ -12,7 +12,7 @@ namespace Utils
         /// 将byte数组转化为16进制字符串
         /// </summary>
         /// <returns></returns>
-        public string ToHexString(byte[] bytes)
+        public static string ToHexString(byte[] bytes)
         {
             string hexString = string.Empty;
 
@@ -38,7 +38,7 @@ namespace Utils
         /// </summary>
         /// <param name="hexString"></param>
         /// <returns></returns>
-        public byte[] GetBytes(string hexString)
+        public static byte[] GetBytes(string hexString)
         {
             int discarded = 0;
             string newString = "";
