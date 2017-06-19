@@ -1,7 +1,7 @@
 ﻿using Microsoft.International.Converters.PinYinConverter;
 using System.Text;
 
-namespace Utils
+namespace XUtils
 {
     public class Pinyin
     {

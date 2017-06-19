@@ -4,7 +4,7 @@ using System.Data;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Utils
+namespace XUtils
 {
     public class StringUtil
     {
