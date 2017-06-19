@@ -43,3 +43,5 @@ Temporary Items
 .apdisk
 Utils/obj/
 Utils/bin/
+Utils/XUtils.nuspec
+*.nupkg
